@@ -5,7 +5,7 @@ import { URL } from 'url'
 const xmlParser = new XMLParser({ ignoreDeclaration: true })
 
 const apiKey = process.env.API_KEY
-console.log('loaded api key: ' + apiKey)
+console.log('loaded API key: ' + apiKey)
 
 export const client = axios.create({
   baseURL: 'https://amonamarth.fieldcontrol.com.br',
