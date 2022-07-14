@@ -1,5 +1,6 @@
 import { client } from '../core/client.js'
 import { getData, getFistItem } from '../core/utils.js'
+import assert from 'node:assert'
 
 async function run () {
   // consultando um local qualquer para usar na abertura de manutenção
@@ -37,16 +38,21 @@ async function run () {
   }).then(getData)
 
   const comment = await client.post(`/maintenances/${maintenance.id}/comments`, {
-    message: 'comentário de teste',
+    message: 'comentário de exemplo',
     archived: false,
-    type: 'INTERNAL',
+    type: 'COMPANY',
     postedBy: {
       name: 'Leo',
-      externalId: 'leo-falco'
+      externalId: 'leo-falco',
+      avatarUrl: 'https://avatars.githubusercontent.com/u/25820906'
     }
   }).then(getData)
 
-  console.log('comment', comment)
+  assert.equal(comment.message, 'comentário de exemplo')
+  assert.equal(comment.type, 'COMPANY')
+  assert.equal(comment.postedBy.id, '5dc173b9-f3c7-5fff-a5f9-f4bcecd3cdb9')
+  assert.equal(comment.postedBy.name, 'Leo')
+  assert.equal(comment.postedBy.avatarUrl, 'https://avatars.githubusercontent.com/u/25820906')
 }
 
 run()
