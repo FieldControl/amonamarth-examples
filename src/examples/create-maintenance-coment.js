@@ -53,6 +53,15 @@ async function run () {
   assert.equal(comment.postedBy.id, '5dc173b9-f3c7-5fff-a5f9-f4bcecd3cdb9')
   assert.equal(comment.postedBy.name, 'Leo')
   assert.equal(comment.postedBy.avatarUrl, 'https://avatars.githubusercontent.com/u/25820906')
+
+  const commentsPage = await client.get(`/maintenances/${maintenance.id}/comments`, {
+    params: {
+      page: 1,
+      perPage: 1
+    }
+  }).then(getData)
+
+  assert.equal(commentsPage.items.length, 1)
 }
 
 run()
