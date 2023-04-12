@@ -34,5 +34,5 @@ assim como na imagem:
 Os arquivos de exemplos estão na pasta `src/examples` é possível executa-los diretamente pelo node.js
 
 ```sh
-  node src/create-maintenance-with-attachment.js
+  node src/examples/create-maintenance-with-attachment.js
 ```
