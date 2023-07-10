@@ -5,13 +5,20 @@ import { client } from '../core/client.js'
 import { getData } from '../core/utils.js'
 
 async function run () {
-  await client.get('/segments', {
+  // Obter empresas próximas a "Avenida Abrão josé de lima 659"
+  // https://amonamarth.fieldcontrol.com.br/docs#/Companies/CompanyController_nearBy
+  const result = await client.post('/companies/actions/nearby', {
+    formattedAddress: 'Avenida Abrão josé de lima 659',
+    postalCode: '15110000', // opcional
+    countryCode: null // opcional
+  }, {
     params: {
       page: 1,
-      perPage: 1,
-      nameEq: 'Ar condicionado é'
+      perPage: 2
     }
   }).then(getData)
+
+  console.log('result', result)
 }
 
 run()

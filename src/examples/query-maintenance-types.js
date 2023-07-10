@@ -1,3 +1,6 @@
+// Exemplo baseado na documentação disponível em https://amonamarth.fieldcontrol.com.br/docs
+// Os dados informados são apenas exemplos de testes e não representam a verdade
+
 import { client } from '../core/client.js'
 import { getData } from '../core/utils.js'
 

@@ -5,13 +5,8 @@ import { client } from '../core/client.js'
 import { getData } from '../core/utils.js'
 
 async function run () {
-  await client.get('/segments', {
-    params: {
-      page: 1,
-      perPage: 1,
-      nameEq: 'Ar condicionado é'
-    }
-  }).then(getData)
+  // Obter histórico de uso de geolocalização de empresa
+  await client.get('/companies/actions/nearby/usage').then(getData)
 }
 
 run()
