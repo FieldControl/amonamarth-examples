@@ -3,10 +3,22 @@
 
 import { client } from '../core/client.js'
 import { getData } from '../core/utils.js'
+import assert from 'node:assert'
 
 async function run () {
   // Obter histórico de uso de geolocalização de empresa
-  await client.get('/companies/actions/nearby/usage').then(getData)
+  const result = await client.get('/companies/actions/nearby/usage').then(getData)
+
+  assert.deepEqual(result, {
+    items: [
+      {
+        id: 'eyJwayI6IlVTQUdFIzEiLCJzayI6IjIwMjMtMDcifQ==',
+        month: '2023-07',
+        quota: 2000,
+        usedQuota: 10
+      }
+    ]
+  })
 }
 
 run()
