@@ -9,6 +9,8 @@ console.log('loaded API key: ' + apiKey)
 
 export const client = axios.create({
   baseURL: 'https://amonamarth.fieldcontrol.com.br',
+  // baseURL: 'https://12qpp0hm8j.execute-api.sa-east-1.amazonaws.com/preview',
+  // baseURL: 'http://localhost:3000',
   headers: {
     'content-type': 'application/json',
     'x-api-key': apiKey
