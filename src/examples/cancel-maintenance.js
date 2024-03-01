@@ -23,7 +23,7 @@ async function run () {
 
   strictEqual(pendingMaintenance.id, canceledMaintenance.id)
   strictEqual(canceledMaintenance.status, 'CANCELED')
-  strictEqual(canceledMaintenance.cancellationReason, payload.cancellationReason)
+  strictEqual(canceledMaintenance.statusDescription, payload.cancellationReason)
 }
 
 run()
