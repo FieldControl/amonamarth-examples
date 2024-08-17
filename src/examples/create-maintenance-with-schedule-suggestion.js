@@ -16,7 +16,7 @@ async function run () {
     params: {
       page: 1,
       perPage: 1,
-      nameEq: 'Ar condicionado'
+      nameEq: '001 - Ar condicionado'
     }
   }).then(getFistItem)
 
@@ -29,6 +29,7 @@ async function run () {
     }
   }).then(getFistItem)
 
+  const currentYear = new Date().getFullYear()
   // criando manutenção com sugestão de agendamento
   const maintenance = await client.post('/maintenances', {
     message: 'Manutenção de com anexos vinculados',
@@ -37,17 +38,15 @@ async function run () {
     maintenanceType: { id: maintenanceType.id },
     scheduleSuggestions: [
       {
-        date: '2023-08-12',
+        date: new Date().toISOString().split('T')[0],
         time: '17:00'
       },
       {
-        date: '2023-08-16',
-        time: null
+        date: `${currentYear}-12-31`,
+        time: '23:59'
       }
     ]
   }).then(getData)
-
-  console.log('maintenance', maintenance)
 }
 
 run()

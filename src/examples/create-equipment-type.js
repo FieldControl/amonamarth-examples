@@ -10,7 +10,7 @@ async function run () {
     params: {
       page: 1,
       perPage: 10,
-      nameEq: 'Ar condicionado'
+      nameEq: '001 - Ar condicionado'
     }
   }).then(getFistItem)
 

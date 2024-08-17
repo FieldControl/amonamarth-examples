@@ -8,10 +8,9 @@ const apiKey = process.env.API_KEY
 console.log('loaded API key: ' + apiKey)
 
 export const client = axios.create({
-  // baseURL: 'https://amonamarth.fieldcontrol.com.br',
-  baseURL: 'http://amonamarth-arm64-homolog.sa-east-1.elasticbeanstalk.com/',
-  // baseURL: 'https://12qpp0hm8j.execute-api.sa-east-1.amazonaws.com/preview',
-  // baseURL: 'http://localhost:3000',
+  baseURL: 'https://amonamarth.fieldcontrol.com.br', // prod
+  // baseURL: 'https://amonamarth.fieldcontrol.dev', // homolog
+  // baseURL: 'http://localhost:3000', // local
   headers: {
     'content-type': 'application/json',
     'x-api-key': apiKey

@@ -20,7 +20,7 @@ async function run () {
     params: {
       page: 1,
       perPage: 1,
-      nameEq: 'Ar condicionado'
+      nameEq: '001 - Ar condicionado'
     }
   }).then(getFistItem)
 
@@ -66,7 +66,7 @@ async function run () {
     id: '23adcaa6-fd7f-48c3-b42d-57df81993edc',
     segment: {
       id: '1d8a6476-2f12-4766-8941-87d4ee4baf45',
-      name: 'Ar condicionado'
+      name: '001 - Ar condicionado'
     },
     maintenanceTypes: [
       {
