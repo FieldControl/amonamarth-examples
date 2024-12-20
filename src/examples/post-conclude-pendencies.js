@@ -5,11 +5,9 @@ import { client } from '../core/client.js'
 import { getData } from '../core/utils.js'
 
 async function run () {
-  await client.get('/maintenances/e1c823ff-7000-4fde-90a6-aa4596169a76/form-answers/be46fbc1-fd70-4583-bad3-24403bf54ea5', {
-    params: {
-      page: 1,
-      perPage: 10
-    }
+  await client.post('/pendencies/e5a288a5-af6f-4b2c-ab8f-abd4e21178c2/actions/conclude', {
+    title: 'Pendência de teste criada via API',
+    description: 'Esta é uma pendência de teste criada via API'
   }).then(getData)
 }
 

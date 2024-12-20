@@ -1,5 +1,5 @@
-import { client } from '../core/client.js'
-import { getData, getFistItem } from '../core/utils.js'
+import { client } from '../../core/client.js'
+import { getData, getFistItem } from '../../core/utils.js'
 
 async function run () {
   // consultando um local qualquer para usar na abertura de manutenção

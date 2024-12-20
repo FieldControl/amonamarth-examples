@@ -1,7 +1,7 @@
 import axios from 'axios'
 import 'dotenv/config'
 import { XMLParser } from 'fast-xml-parser'
-import { URL } from 'url'
+import { URL } from 'node:url'
 const xmlParser = new XMLParser({ ignoreDeclaration: true })
 
 const apiKey = process.env.API_KEY
