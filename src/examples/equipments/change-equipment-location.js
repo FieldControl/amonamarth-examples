@@ -37,6 +37,7 @@ async function run () {
   }).then(getData)
 
   console.log('updatedEquipment', updatedEquipment)
+  assert.equal(updatedEquipment.name, 'Ar condicionado Split com foto')
 }
 
 run()

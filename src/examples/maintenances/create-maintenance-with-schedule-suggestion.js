@@ -1,3 +1,4 @@
+import assert from 'node:assert'
 import { client } from '../../core/client.js'
 import { getData, getFistItem } from '../../core/utils.js'
 
@@ -47,6 +48,8 @@ async function run () {
       }
     ]
   }).then(getData)
+
+  assert.equal(maintenance.message, 'Manutenção de com anexos vinculados')
 }
 
 run()
