@@ -8,31 +8,27 @@
 
 Este é um repositório auxiliar contendo trechos de código e exemplos de uso.
 
-## Pré-requisitos para executar o projeto
+## Multilingual / Multilíngue
 
-- Node.js version manager, caso não tenha o nvm instale seguindo estes passos
-  - [nvm para windows](https://github.com/coreybutler/nvm-windows)
-  - [nvm pra mac/linux](https://github.com/nvm-sh/nvm#installing-and-updating)
+Os exemplos estão divididos em três versões, com comentários e textos no idioma correspondente. O código compartilhado (cliente HTTP e utilitários) fica na pasta `core` na raiz do repositório.
 
-- Clonar este repositório localmente `git clone https://github.com/LeoFalco/amonamarth-examples.git`
+The examples are split into three versions, with comments and text in the matching language. The shared code (HTTP client and utilities) lives in the `core` folder at the root of the repository.
 
-- Na pasta do projeto executar os seguintes comandos
+- 🇧🇷 **Português** — exemplos em `pt/exemplos/` · veja [pt/README.md](pt/README.md)
+- 🇺🇸 **English** — examples in `en/examples/` · see [en/README.md](en/README.md)
+- 🇪🇸 **Español** — ejemplos en `es/ejemplos/` · vea [es/README.md](es/README.md)
 
-  ```sh
-  nvm install # para instalar o nome
-  nvm use # troca para a versão do node.js instalada
-  npm install # instala as dependências do projeto
-  ```
+## Estrutura / Structure
 
-- O projeto usa autenticação por de API key você pode declarar a sua dentro de um arquivo chamado `.env`
-assim como na imagem:
-
-  ![image](https://user-images.githubusercontent.com/25820906/178081437-c5939851-116e-44e1-8527-91dc6a63900c.png)
-
-## Executando arquivos
-
-Os arquivos de exemplos estão na pasta `src/examples` é possível executa-los diretamente pelo node.js
-
-```sh
-  node src/examples/create-maintenance-with-attachment.js
+```text
+amonamarth-examples/
+├── core/   # código compartilhado / shared code (client.js, utils.js)
+├── data/   # arquivos de exemplo / example files
+├── pt/     # exemplos em português / Portuguese examples
+├── en/     # exemplos em inglês / English examples
+└── es/     # ejemplos em espanhol / Spanish examples
 ```
+
+Consulte o README de cada idioma para os pré-requisitos e as instruções de execução.
+
+See the README for each language for prerequisites and run instructions.
